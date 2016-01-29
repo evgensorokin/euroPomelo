@@ -29,84 +29,84 @@
  * Twenty Sixteen only works in WordPress 4.4 or later.
  */
 if ( version_compare( $GLOBALS['wp_version'], '4.4-alpha', '<' ) ) {
-	require get_template_directory() . '/inc/back-compat.php';
+    require get_template_directory() . '/inc/back-compat.php';
 }
 
 if ( ! function_exists( 'euroPomelo_setup' ) ) :
-/**
- * Sets up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
- *
- * Create your own euroPomelo_setup() function to override in a child theme.
- *
- * @since Twenty Sixteen 1.0
- */
-function euroPomelo_setup() {
-	/*
-	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on Twenty Sixteen, use a find and replace
-	 * to change 'euroPomelo' to the name of your theme in all the template files
-	 */
-	load_theme_textdomain( 'euroPomelo', get_template_directory() . '/languages' );
+    /**
+     * Sets up theme defaults and registers support for various WordPress features.
+     *
+     * Note that this function is hooked into the after_setup_theme hook, which
+     * runs before the init hook. The init hook is too late for some features, such
+     * as indicating support for post thumbnails.
+     *
+     * Create your own euroPomelo_setup() function to override in a child theme.
+     *
+     * @since Twenty Sixteen 1.0
+     */
+    function euroPomelo_setup() {
+        /*
+         * Make theme available for translation.
+         * Translations can be filed in the /languages/ directory.
+         * If you're building a theme based on Twenty Sixteen, use a find and replace
+         * to change 'euroPomelo' to the name of your theme in all the template files
+         */
+        load_theme_textdomain( 'euroPomelo', get_template_directory() . '/languages' );
 
-	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
+        // Add default posts and comments RSS feed links to head.
+        add_theme_support( 'automatic-feed-links' );
 
-	/*
-	 * Let WordPress manage the document title.
-	 * By adding theme support, we declare that this theme does not use a
-	 * hard-coded <title> tag in the document head, and expect WordPress to
-	 * provide it for us.
-	 */
-	add_theme_support( 'title-tag' );
+        /*
+         * Let WordPress manage the document title.
+         * By adding theme support, we declare that this theme does not use a
+         * hard-coded <title> tag in the document head, and expect WordPress to
+         * provide it for us.
+         */
+        add_theme_support( 'title-tag' );
 
-	/*
-	 * Enable support for Post Thumbnails on posts and pages.
-	 *
-	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
-	 */
-	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 1200, 0, true );
+        /*
+         * Enable support for Post Thumbnails on posts and pages.
+         *
+         * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+         */
+        add_theme_support( 'post-thumbnails' );
+        set_post_thumbnail_size( 1200, 0, true );
 
-	// This theme uses wp_nav_menu() in two locations.
-	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'euroPomelo' ),
-		'social'  => __( 'Social Links Menu', 'euroPomelo' ),
-	) );
+        // This theme uses wp_nav_menu() in two locations.
+        register_nav_menus( array(
+            'primary' => __( 'Primary Menu', 'euroPomelo' ),
+            'social'  => __( 'Social Links Menu', 'euroPomelo' ),
+        ) );
 
-	/*
-	 * Switch default core markup for search form, comment form, and comments
-	 * to output valid HTML5.
-	 */
-	add_theme_support( 'html5', array(
-		'search-form',
-		'comment-form',
-		'comment-list',
-		'gallery',
-		'caption',
-	) );
+        /*
+         * Switch default core markup for search form, comment form, and comments
+         * to output valid HTML5.
+         */
+        add_theme_support( 'html5', array(
+            'search-form',
+            'comment-form',
+            'comment-list',
+            'gallery',
+            'caption',
+        ) );
 
-	/*
-	 * Enable support for Post Formats.
-	 *
-	 * See: https://codex.wordpress.org/Post_Formats
-	 */
-	add_theme_support( 'post-formats', array(
-		'aside',
-		'image',
-		'video',
-		'quote',
-		'link',
-		'gallery',
-		'status',
-		'audio',
-		'chat',
-	) );
-}
+        /*
+         * Enable support for Post Formats.
+         *
+         * See: https://codex.wordpress.org/Post_Formats
+         */
+        add_theme_support( 'post-formats', array(
+            'aside',
+            'image',
+            'video',
+            'quote',
+            'link',
+            'gallery',
+            'status',
+            'audio',
+            'chat',
+        ) );
+    }
 endif; // euroPomelo_setup
 add_action( 'after_setup_theme', 'euroPomelo_setup' );
 
@@ -118,15 +118,15 @@ add_action( 'after_setup_theme', 'euroPomelo_setup' );
  * @since Twenty Sixteen 1.0
  */
 function euroPomelo_widgets_init() {
-	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'euroPomelo' ),
-		'id'            => 'sidebar-1',
-		'description'   => __( 'Add widgets here to appear in your sidebar.', 'euroPomelo' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
+    register_sidebar( array(
+        'name'          => __( 'Sidebar', 'euroPomelo' ),
+        'id'            => 'sidebar-1',
+        'description'   => __( 'Add widgets here to appear in your sidebar.', 'euroPomelo' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ) );
 }
 add_action( 'widgets_init', 'euroPomelo_widgets_init' );
 
@@ -138,7 +138,7 @@ add_action( 'widgets_init', 'euroPomelo_widgets_init' );
  * @since Twenty Sixteen 1.0
  */
 function euroPomelo_javascript_detection() {
-	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
+    echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
 }
 add_action( 'wp_head', 'euroPomelo_javascript_detection', 0 );
 
@@ -148,14 +148,15 @@ add_action( 'wp_head', 'euroPomelo_javascript_detection', 0 );
  * @since Twenty Sixteen 1.0
  */
 function euroPomelo_scripts() {
-	// Theme stylesheet.
-	wp_enqueue_style( 'euroPomelo-style', get_stylesheet_uri() );
+    // Theme stylesheet.
+    wp_enqueue_style( 'euroPomelo-bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.5' );
+    wp_enqueue_style( 'euroPomelo-style', get_stylesheet_uri() );
 
-	// Load the html5 shiv.
-	wp_enqueue_script( 'euroPomelo-html5', get_template_directory_uri() . '/js/html5.js', array(), '3.7.3' );
-	wp_script_add_data( 'euroPomelo-html5', 'conditional', 'lt IE 9' );
+    // Load the html5 shiv.
+    wp_enqueue_script( 'euroPomelo-html5', get_template_directory_uri() . '/js/html5.js', array(), '3.7.3' );
+    wp_script_add_data( 'euroPomelo-html5', 'conditional', 'lt IE 9' );
 
-	wp_enqueue_script( 'euroPomelo-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20150825', true );
+    wp_enqueue_script( 'euroPomelo-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20150825', true );
 }
 add_action( 'wp_enqueue_scripts', 'euroPomelo_scripts' );
 
@@ -168,27 +169,27 @@ add_action( 'wp_enqueue_scripts', 'euroPomelo_scripts' );
  * @return array (Maybe) filtered body classes.
  */
 function euroPomelo_body_classes( $classes ) {
-	// Adds a class of custom-background-image to sites with a custom background image.
-	if ( get_background_image() ) {
-		$classes[] = 'custom-background-image';
-	}
+    // Adds a class of custom-background-image to sites with a custom background image.
+    if ( get_background_image() ) {
+        $classes[] = 'custom-background-image';
+    }
 
-	// Adds a class of group-blog to sites with more than 1 published author.
-	if ( is_multi_author() ) {
-		$classes[] = 'group-blog';
-	}
+    // Adds a class of group-blog to sites with more than 1 published author.
+    if ( is_multi_author() ) {
+        $classes[] = 'group-blog';
+    }
 
-	// Adds a class of no-sidebar to sites without active sidebar.
-	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-		$classes[] = 'no-sidebar';
-	}
+    // Adds a class of no-sidebar to sites without active sidebar.
+    if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+        $classes[] = 'no-sidebar';
+    }
 
-	// Adds a class of hfeed to non-singular pages.
-	if ( ! is_singular() ) {
-		$classes[] = 'hfeed';
-	}
+    // Adds a class of hfeed to non-singular pages.
+    if ( ! is_singular() ) {
+        $classes[] = 'hfeed';
+    }
 
-	return $classes;
+    return $classes;
 }
 add_filter( 'body_class', 'euroPomelo_body_classes' );
 
@@ -202,21 +203,21 @@ add_filter( 'body_class', 'euroPomelo_body_classes' );
  *               HEX code, empty array otherwise.
  */
 function euroPomelo_hex2rgb( $color ) {
-	$color = trim( $color, '#' );
+    $color = trim( $color, '#' );
 
-	if ( strlen( $color ) === 3 ) {
-		$r = hexdec( substr( $color, 0, 1 ).substr( $color, 0, 1 ) );
-		$g = hexdec( substr( $color, 1, 1 ).substr( $color, 1, 1 ) );
-		$b = hexdec( substr( $color, 2, 1 ).substr( $color, 2, 1 ) );
-	} else if ( strlen( $color ) === 6 ) {
-		$r = hexdec( substr( $color, 0, 2 ) );
-		$g = hexdec( substr( $color, 2, 2 ) );
-		$b = hexdec( substr( $color, 4, 2 ) );
-	} else {
-		return array();
-	}
+    if ( strlen( $color ) === 3 ) {
+        $r = hexdec( substr( $color, 0, 1 ).substr( $color, 0, 1 ) );
+        $g = hexdec( substr( $color, 1, 1 ).substr( $color, 1, 1 ) );
+        $b = hexdec( substr( $color, 2, 1 ).substr( $color, 2, 1 ) );
+    } else if ( strlen( $color ) === 6 ) {
+        $r = hexdec( substr( $color, 0, 2 ) );
+        $g = hexdec( substr( $color, 2, 2 ) );
+        $b = hexdec( substr( $color, 4, 2 ) );
+    } else {
+        return array();
+    }
 
-	return array( 'red' => $r, 'green' => $g, 'blue' => $b );
+    return array( 'red' => $r, 'green' => $g, 'blue' => $b );
 }
 
 /**
