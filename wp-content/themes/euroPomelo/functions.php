@@ -229,3 +229,69 @@ require get_template_directory() . '/inc/template-tags.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+add_action( 'init', 'create_post_type_products' );
+function create_post_type_products() {
+    $labels = array(
+        'name' => _x('Products', 'post type general name'),
+        'singular_name' => _x('Product', 'post type singular name'),
+        'add_new' => _x('Add New', 'post'),
+        'add_new_item' => __('Add New Product'),
+        'edit_item' => __('Edit Product'),
+        'new_item' => __('New Product'),
+        'view_item' => __('View Product'),
+        'search_items' => __('Search Product'),
+        'not_found' =>  __('Nothing found'),
+        'not_found_in_trash' => __('Nothing found in Trash'),
+        'parent_item_colon' => ''
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'menu_position' => 5,
+        'supports' => array('title','thumbnail','editor','comments', 'excerpt'),
+        'taxonomies' => array('post_tag')
+    );
+
+    register_post_type( 'euro_pomelo_product', $args);
+}
+
+add_action( 'init', 'create_post_type_receiptes' );
+function create_post_type_receiptes() {
+    $labels = array(
+        'name' => _x('Receiptes', 'post type general name'),
+        'singular_name' => _x('Receipte', 'post type singular name'),
+        'add_new' => _x('Add New', 'post'),
+        'add_new_item' => __('Add New Receipte'),
+        'edit_item' => __('Edit Receipte'),
+        'new_item' => __('New Receipte'),
+        'view_item' => __('View Receipte'),
+        'search_items' => __('Search Receipte'),
+        'not_found' =>  __('Nothing found'),
+        'not_found_in_trash' => __('Nothing found in Trash'),
+        'parent_item_colon' => ''
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'menu_position' => 5,
+        'supports' => array('title','thumbnail','editor','comments', 'excerpt'),
+        'taxonomies' => array('post_tag')
+    );
+
+    register_post_type( 'euro_pomelo_receipte', $args);
+}
