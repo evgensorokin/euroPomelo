@@ -248,6 +248,7 @@ function create_post_type_products() {
 
     $args = array(
         'labels' => $labels,
+
         'public' => true,
         'publicly_queryable' => true,
         'show_ui' => true,
@@ -294,4 +295,38 @@ function create_post_type_receiptes() {
     );
 
     register_post_type( 'euro_pomelo_receipte', $args);
+}
+
+add_action('init', 'create_brand');
+function create_brand(){
+    $labels = array(
+        'name'              => 'Brands',
+        'singular_name'     => 'Brand',
+        'search_items'      => 'Search Brands',
+        'all_items'         => 'All Brands',
+        'parent_item'       => 'Parent Brand',
+        'parent_item_colon' => 'Parent Brand:',
+        'edit_item'         => 'Edit Brand',
+        'update_item'       => 'Update Brand',
+        'add_new_item'      => 'Add New Brand',
+        'new_item_name'     => 'New Brand Name',
+        'menu_name'         => 'Brand',
+    );
+    $args = array(
+        'label'                 => '',
+        'labels'                => $labels,
+        'public'                => true,
+        'show_in_nav_menus'     => true,
+        'show_ui'               => true,
+        'show_tagcloud'         => true,
+        'hierarchical'          => true,
+        'update_count_callback' => '',
+        'rewrite'               => true,
+        'capabilities'          => array(),
+        'meta_box_cb'           => null,
+        'show_admin_column'     => false,
+        '_builtin'              => false,
+        'show_in_quick_edit'    => null,
+    );
+    register_taxonomy('taxonomy', 'euro_pomelo_product', $args );
 }
