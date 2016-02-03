@@ -330,3 +330,10 @@ function create_brand(){
     );
     register_taxonomy('taxonomy', 'euro_pomelo_product', $args );
 }
+
+if( function_exists('acf_add_options_page') ) {
+
+    acf_add_options_page();
+
+    acf_add_options_sub_page('Footer');
+}

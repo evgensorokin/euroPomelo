@@ -1,3 +1,383 @@
 /*
 Theme Name: Euro Pomelo
 */
+@font-face {
+    font-family: 'OpenSans';
+    src:url('fonts/OpenSans.eot');
+    src:url('fonts/OpenSans.eot#iefix') format('embedded-opentype'),
+    url('fonts/OpenSans.ttf') format('truetype'),
+    url('fonts/OpenSans.woff') format('woff'),
+    url('fonts/OpenSans.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OpenSansSemibold';
+    src:url('fonts/OpenSansSemibold.eot');
+    src:url('fonts/OpenSansSemibold.eot#iefix') format('embedded-opentype'),
+    url('fonts/OpenSansSemibold.ttf') format('truetype'),
+    url('fonts/OpenSansSemibold.woff') format('woff'),
+    url('fonts/OpenSansSemibold.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}@font-face {
+    font-family: 'OpenSansLigth';
+    src:url('fonts/OpenSansLigth.eot');
+    src:url('fonts/OpenSansLigth.eot#iefix') format('embedded-opentype'),
+    url('fonts/OpenSansLigth.ttf') format('truetype'),
+    url('fonts/OpenSansLigth.woff') format('woff'),
+    url('fonts/OpenSansLigth.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OpenSansBold';
+    src:url('fonts/OpenSansBold.eot');
+    src:url('fonts/OpenSansBold.eot#iefix') format('embedded-opentype'),
+    url('fonts/OpenSansBold.ttf') format('truetype'),
+    url('fonts/OpenSansBold.woff') format('woff'),
+    url('fonts/OpenSansBold.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Amatic';
+    src:url('fonts/AmaticSC.eot');
+    src:url('fonts/AmaticSC.eot#iefix') format('embedded-opentype'),
+    url('fonts/AmaticSC.ttf') format('truetype'),
+    url('fonts/AmaticSC.woff') format('woff'),
+    url('fonts/AmaticSC.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;padding: 0;border: 0;font-size: 100%;vertical-align: baseline;box-sizing: border-box;
+    font-family: 'OpenSansLigth';
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {display: block;}
+
+html, body{height: 100%;}
+body{min-width: 320px;}
+ol, ul{list-style: none;}
+blockquote, q{quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after, .clearfix:before, .clearfix:after{display: table;content: " ";}
+.clearfix:after{clear: both;}
+table{border-collapse: collapse;border-spacing: 0;}
+
+h1{font-size: 48px;color: #178cca;line-height: 58px;padding-bottom: 5px;}
+h2{font-size: 48px;color: #178cca;line-height: 58px;padding-bottom: 5px;}
+h3{}
+
+p{font-size: 20px;color: #000;line-height: 36px;padding: 15px 0;}
+a{}
+.img-responsive{margin: 0 auto;}
+hr{border-top: 1px solid #D7D7D7;margin: 10px;}
+
+.color_1{background-color: #E8ECDA;}
+.color_2{background-color: #FFE9E9;}
+.color_3{background-color: #DBEEF8;}
+.color_4{background-color: #E2EACB;}
+.color_5{background-color: #DBF4F8;}
+.color_6{background-color: #ECFFCD;}
+.color_7{background-color: #EBC3AA;}
+
+.btn-inline{display: inline-block;}
+.btn-blue{border: 1px solid #fff;background-color: #2F98CF;color: #fff;font-size: 24px;text-align: center;
+    padding: 15px 50px;display: inline-block;border-radius: 3px;margin: 10px 0;}
+.btn-blue:hover{color: #2F98CF;background-color: #fff;border-color: #2F98CF;text-decoration: none;}
+
+.btn-default{border: 1px solid #178cca;background-color: #fff;color: #178cca;font-size: 18px;text-align: center;
+    padding: 10px 25px;display: inline-block;border-radius: 3px;margin: 10px 0;}
+.btn-default:hover{color: #fff;background-color: #178cca;border-color: #fff;text-decoration: none;}
+
+.btn-load{font-size: 21px;color: #383636;border: 1px solid #DADADA;border-radius: 5px;margin: 50px 0;
+    padding: 10px 50px;display: inline-block;text-decoration: none;}
+.btn-load:hover{text-decoration: none;background-color: #383636;color: #DADADA;}
+
+.padd-b-none{padding-bottom: 0 !important;}
+.padd-t-none{padding-top: 0 !important;}
+.container{position: relative;}
+/* end */
+
+/* header */
+header{background-color: #178CCA;padding: 40px 0;position: relative;}
+header .button-menu{display: none;}
+header ul{margin: 23px 0 0 50px;}
+header ul li{padding: 0 34px;float: left;}
+header ul li a{color: #fff;text-transform: uppercase;font-size: 14px;}
+header ul li.current-menu-item a,
+header ul li a:hover{color: #fff;text-decoration: underline;}
+
+/* sections */
+.lite-blue-screen{background-color: #178CCA;}
+.main-page-sl{padding: 30px 0 50px;}
+.main-page-sl .h1{font-size: 72px;color: #fff;font-family: 'Amatic';}
+.main-page-sl .h2{font-size: 30px;color: #fff;}
+
+.white-box-content{padding: 75px 0;}
+.beige-box-content{background-color: #F3F4EF;}
+
+/* brands */
+.brands{padding: 50px 0 20px;}
+.brands .title{font-size: 14px;color: #000;display: block;padding: 0 10% 10px;}
+.brands .brands-img{padding: 30px 10px 50px;text-align: justify;-moz-text-align-last: justify;-webkit-text-align-last: justify;text-align-last: justify;}
+.brands .brands-img img{vertical-align: middle;}
+
+/* color-res */
+.color-res{position: relative;margin-top: 50px;}
+.color-res .colors-sides{margin: 0;}
+.color-res .colors-sides .col-xs-6{height: 455px;}
+.color-res .res-box{position: absolute;top: 0;left: 50%;margin-left: -585px;}
+.color-res .res-box .item{height: 455px;text-align: center;}
+.color-res .res-box .item>div{position: absolute;bottom: 100px;width: calc(100% - 30px);}
+.color-res .res-box .item span{display: block;font-family: 'Amatic';font-size: 36px;color: #000;margin-top: 60px;}
+
+/* contact us */
+.contact_us{padding: 100px 0;}
+.contact_us h1{margin-bottom: 25px;}
+.form-control{border: 1px solid #D4D4D4;border-radius: 5px;height: 50px;line-height: 50px;margin-bottom: 16px;font-size: 21px;
+    color: #383636;width: 100%;box-sizing: border-box;padding: 0 20px;}
+.form-control:focus{outline: none;border-color: #B2B2B2;}
+textarea.form-control{height: 230px;resize: vertical;}
+.contact_us .address p{padding: 0;font-size: 21px;line-height: 24px;margin-bottom: 5px;}
+.contact_us form{border-right: 1px solid #E5E5E5;padding-right: 30px;}
+.contact_us p b{font-family: 'OpenSansBold';color: #696767;}
+.contact_us .btn{border-color: #D4D4D4;color: #383636;}
+.contact_us .btn:hover{border-color: #383636;color: #D4D4D4;background-color: #383636;}
+.contact_us .social{padding-top: 10px;}
+.contact_us .social a{display: inline-block;margin-right: 12px;width: 33px;height: 33px;border: 1px solid #696767;
+    border-radius: 50%;text-align: center;line-height: 36px;}
+
+/* presentation */
+.presentation{padding: 250px 0;background: url("img/bg_presentation.png") center no-repeat;background-size: cover;}
+.presentation .title{font-family: 'Amatic';color: #fff;font-size: 72px;padding-bottom: 25px;}
+.presentation .btn{font-size: 24px;color: #fff;border: 1px solid #fff;background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px 50px;border-radius: 3px;}
+.presentation .btn:hover{text-decoration: none;background-color: rgba(23, 140, 202, 0.2);}
+
+/* tab brands */
+.tab-brands{background-color: #DBEEF8;}
+.tab-brands .active-tab{background-color: #fff;}
+.tab-brands .tab{padding: 30px 20px;}
+.tab-brands .tab a{color: #178cca;font-size: 48px;vertical-align: middle;margin: 0 50px;font-family: 'OpenSans';}
+.tab-brands .tab a:hover{text-decoration: none;}
+.tab-brands .tab img{vertical-align: middle;}
+
+/* list products */
+.list-products{padding: 0 0 100px;}
+.list-products .row{margin: 0 -5px;}
+.list-products h2{padding-bottom: 100px;}
+.list-products .product{height: 425px;padding: 0 5px;margin: 5px 0;}
+.list-products .img{height: 265px;background-size: cover !important;}
+.list-products .color-box{height: 160px;}
+.list-products .color-box>div{position: relative;top: 50%;transform: translateY(-50%);}
+.list-products .color-box b{color: #000;font-size: 21px;padding-bottom: 10px;font-family: 'OpenSansSemibold';display: block;}
+.list-products .color-box a{color: #383636;font-size: 18px;display: inline-block;padding: 5px 25px;text-align: center;
+    border: 1px solid #383636;border-radius: 3px;}
+.list-products .color-box a:hover{text-decoration: none;background-color: #383636;color: #DADADA;}
+
+/* list recepies */
+.list-recepies{}
+.list-recepies .row{margin: 0 -5px;}
+.list-recepies h2{padding-bottom: 75px;}
+.list-recepies .recepie{height: 600px;padding: 0 5px;margin: 5px 0;}
+.list-recepies .img{height: 260px;background-size: cover !important;}
+.list-recepies .color-box{height: 340px;padding: 20px 5%;}
+.list-recepies .color-box>div{position: relative;top: 50%;transform: translateY(-50%);}
+.list-recepies .color-box .title{color: #000;font-size: 34px;padding-bottom: 0;font-family: 'Amatic';display: block;}
+.list-recepies .color-box ul{margin-left: 15px;}
+.list-recepies .color-box ul li{font-family: 'OpenSansLigth';font-size: 18px;padding: 0;}
+.list-recepies .color-box hr{margin: 5px 0 25px;border-color: #CBD2B6;}
+.list-recepies .color-box ul li span{font-family: 'Amatic';font-size: 34px;vertical-align: middle;margin-right: 10px;}
+.list-recepies .color-box a{color: #818A8C;font-size: 18px;display: inline-block;padding: 5px 25px;text-align: center;
+    border: 1px solid #CBD2B6;border-radius: 3px;margin-top: 10px;}
+.list-recepies .color-box a:hover{text-decoration: none;background-color: #383636;color: #DADADA;}
+
+/* recepie single */
+.recepie-single{width: 100%;position: static;margin: 50px 0;padding: 75px 0 50px;}
+.recepie-single .img{border: 10px solid #fff;background-size: cover !important;height: 290px;}
+.recepie-single .side-left{padding: 0 30px 0 75px;}
+.recepie-single .ingredients{margin-top: 15px;background-color: #DCE3C8;padding: 20px 50px 20px 120px;position: relative;}
+.recepie-single .ingredients img{position: absolute;top: 20px;left: 45px;}
+.recepie-single .ingredients .title{display: block;font-size: 30px;color: #000;font-family: 'Amatic';padding-bottom: 15px;}
+.recepie-single .ingredients ol{list-style-type: decimal;margin-left: 15px;}
+.recepie-single .ingredients li{font-family: 'OpenSans';font-size: 18px;padding: 2px 0 1px;}
+.recepie-single .side-info{padding: 0 75px 0 30px;}
+.recepie-single .side-info .title{font-size: 34px;color: #000;font-family: 'Amatic';}
+.recepie-single .side-info hr{margin: 10px 0;width: 50%;}
+.recepie-single .side-info p{padding: 5px 0;}
+.recepie-single .arrow{position: absolute;top: 50%;margin-top: -33px;}
+.recepie-single .arrow-left{left: 15px;}
+.recepie-single .arrow-right{right: 15px;}
+
+.also-products{padding: 75px 0 100px;}
+.also-products h2{padding: 0 0 75px;}
+
+/* product article */
+.product-article{padding-bottom: 50px;}
+.product-article .side-left{padding: 0 30px 0 15px;}
+.product-article .side-info{padding: 0 15px 0 30px;}
+.product-article .img{height: 350px;background-size: cover !important;}
+.product-article .category{padding: 20px 25px;font-size: 24px;color: #a8a5a5;font-family: 'OpenSansSemibold';}
+.product-article .category img{vertical-align: middle;margin-right: 15px;}
+.product-article .small-info{border: 1px solid #D8D7D7;border-top: none;padding: 40px 50px;}
+.product-article .small-info p{font-size: 24px;padding: 5px 0;}
+
+/* recepies with */
+.recepies-with{padding: 0 0 75px;}
+.recepies-with .title{font-size: 30px;color: #000;}
+.recepies-with hr{margin: 15px 0;}
+.recepies-with .list-with{padding-top: 30px;}
+.recepies-with .list-with .img{height: 175px;background-size: cover !important;}
+.recepies-with .list-with span{font-size: 16px;display: block;padding-top: 10px;color: #000;}
+
+/* footer */
+footer{background-color: #178CCA;padding: 50px 0;font-size: 14px;color: #fff;}
+
+@media (max-width: 1199px) {
+    .color-res .res-box{margin-left: -485px;}
+
+    .presentation{padding: 150px 0;}
+
+    .recepies-with .list-with .prod-w{margin-bottom: 10px;}
+}
+
+@media (max-width: 991px) {
+    h2{font-size: 38px;line-height: 44px;}
+    p{font-size: 18px;line-height: 28px;}
+
+    .color-res .res-box{margin-left: -375px;}
+    header{padding: 20px 0;}
+    header ul li{padding: 0 20px;}
+    .main-page-sl{padding: 20px 0 30px;}
+    .main-page-sl .h1{margin-top: 0;}
+
+    .white-box-content{padding: 50px 0;}
+    .brands{padding: 10px 0;}
+
+    .brands .brands-img{padding: 20px 10px;}
+
+    .color-res .colors-sides .col-xs-6{height: 350px;}
+    .color-res .res-box .item{height: 350px;}
+    .color-res .res-box .item>div{bottom: 40px;}
+    .color-res .res-box .item span{font-size: 26px;}
+
+    .presentation{padding: 100px 0;}
+
+    .contact_us .address p{font-size: 18px;line-height: 21px;}
+
+    .tab-brands{}
+    .tab-brands .tab{padding: 10px;}
+    .tab-brands .tab a{margin: 0 25px;font-size: 36px;}
+
+    .list-products{padding-bottom: 50px;}
+    .list-products h2{padding-bottom: 60px;}
+    .btn-load{margin: 25px 0;}
+
+    .list-recepies h2{padding-bottom: 50px;}
+
+    .product-article .category{padding: 10px 15px;font-size: 16px;}
+    .product-article .category img{margin-right: 10px;}
+    .product-article .small-info{padding: 20px 25px;}
+    .product-article .small-info p{font-size: 18px;line-height: 24px;}
+    .product-article .side-left,
+    .product-article .side-info{padding: 0 15px;}
+    .product-article .side-info p{padding: 5px 0;}
+
+    .recepies-with{padding-bottom: 25px;}
+    .recepies-with .list-with{padding: 15px 0;}
+
+    .list-products.also-products{padding: 25px 0;}
+    .list-products.also-products h2{padding-bottom: 25px;}
+
+    .recepie-single{margin: 0;padding: 50px 0;}
+    .recepie-single .side-left,
+    .recepie-single .side-info{padding: 0 15px;}
+    .recepie-single .ingredients{padding: 10px 30px 10px 80px;}
+    .recepie-single .ingredients img{left: 15px;}
+    .recepie-single .ingredients .title{padding-bottom: 10px;}
+
+    footer{padding: 25px 0;}
+}
+
+@media (max-width: 767px) {
+    h1{font-size: 34px;line-height: 42px;}
+    h2{font-size: 28px;line-height: 36px;}
+    p{font-size: 16px;line-height: 24px;padding: 5px 0;}
+    .btn-blue{padding: 10px 25px;font-size: 21px;}
+
+    header .button-menu{display: block;position: absolute;top: 30px;right: 20px;cursor: pointer;width: 32px;height: 32px;}
+    header ul{clear: both;margin: 0;float: none;width: 100%;display: none;}
+    header ul.open-menu{display: block;}
+    header .open-menu li{display: block;float: none;text-align: center;padding: 5px 0;}
+
+    .main-page-sl .h1{font-size: 48px;}
+    .main-page-sl .h2{font-size: 22px;}
+
+    .white-box-content{padding: 30px 15px;}
+
+    .content-box-img{text-align: center;}
+    .content-box-img img{margin-bottom: 20px;}
+
+    .color-res .colors-sides{display: none;}
+    .color-res .res-box{left: 0;width: 100%;margin: 0;position: relative;}
+    .color-res .res-box .item{height: auto;padding: 25px 0;}
+    .color-res .res-box .item>div{position: relative;bottom: auto;width: 100%;}
+    .color-res .res-box .item span{margin-top: 20px;}
+
+    .brands .brands-img img{display: block;clear: both;margin: 10px auto;}
+
+    .presentation{padding: 50px 0;}
+    .presentation .title{font-size: 48px;line-height: 52px;}
+    .presentation .btn-box{text-align: center;padding: 10px 15px;}
+    .presentation .btn-box .btn{width: 100%;}
+
+    .contact_us{padding: 30px 0;}
+    .contact_us h1{margin-bottom: 10px;}
+    .contact_us form{border: none;padding: 0;}
+    .contact_us .btn{margin-top: 0;width: 100%;}
+    .contact_us .address{padding-top: 25px;}
+    .contact_us .social{text-align: center;}
+
+    .tab-brands .tab{text-align: center !important;padding: 6px 0;}
+    .tab-brands .tab img{width: 38px;}
+    .tab-brands .tab a{margin: 0;font-size: 18px;}
+    .tab-brands .col-xs-6{height: 55px;}
+
+    .list-products h2{padding-bottom: 45px;}
+
+    .list-recepies h2{padding-bottom: 25px;}
+    .list-recepies .recepie{padding: 0 15px;height: auto;}
+    .list-recepies .color-box{height: auto;}
+    .list-recepies .color-box>div{top: 0;transform: translateY(0);}
+    .list-recepies .color-box hr{margin: 5px 0 15px;}
+    .list-recepies .color-box ul li span{line-height: 34px;}
+    .white-box-content.list-recepies{padding: 30px 0;}
+    .list-recepies .row{margin: 0 -15px;}
+
+    .product-article .category img{height: 30px;}
+
+    .product-article .side-left{padding: 0 15px 15px;}
+    .recepies-with .title{font-size: 20px;text-align: center;}
+
+    .recepie-single{padding: 15px 0;}
+    .recepie-single .side-left{padding: 0 15px 15px;}
+    .recepie-single .ingredients li{font-size: 14px;}
+}
