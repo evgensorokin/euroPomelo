@@ -157,18 +157,22 @@ header ul li a:hover{color: #fff;text-decoration: underline;}
 .form-control{border: 1px solid #D4D4D4;border-radius: 5px;height: 50px;line-height: 50px;margin-bottom: 16px;font-size: 21px;
     color: #383636;width: 100%;box-sizing: border-box;padding: 0 20px;}
 .form-control:focus{outline: none;border-color: #B2B2B2;}
+.form-control.wpcf7-not-valid{border-color: #ac2f2b;}
+span.wpcf7-not-valid-tip{display: none !important;}
+div.wpcf7-validation-errors{margin: 10px 0;}
 textarea.form-control{height: 230px;resize: vertical;}
 .contact_us .address p{padding: 0;font-size: 21px;line-height: 24px;margin-bottom: 5px;}
 .contact_us form{border-right: 1px solid #E5E5E5;padding-right: 30px;}
 .contact_us p b{font-family: 'OpenSansBold';color: #696767;}
-.contact_us .btn{border-color: #D4D4D4;color: #383636;}
-.contact_us .btn:hover{border-color: #383636;color: #D4D4D4;background-color: #383636;}
+.contact_us input[type="submit"]{border: 1px solid #D4D4D4;background-color: #fff;color: #383636;font-size: 18px;text-align: center;
+    padding: 10px 25px;display: inline-block;border-radius: 3px;margin: 10px 0;}
+.contact_us input[type="submit"]:hover{border-color: #383636;color: #D4D4D4;background-color: #383636;}
 .contact_us .social{padding-top: 10px;}
 .contact_us .social a{display: inline-block;margin-right: 12px;width: 33px;height: 33px;border: 1px solid #696767;
     border-radius: 50%;text-align: center;line-height: 36px;}
 
 /* presentation */
-.presentation{padding: 250px 0;background: url("img/bg_presentation.png") center no-repeat;background-size: cover;}
+.presentation{padding: 250px 0;background-size: cover;}
 .presentation .title{font-family: 'Amatic';color: #fff;font-size: 72px;padding-bottom: 25px;}
 .presentation .btn{font-size: 24px;color: #fff;border: 1px solid #fff;background-color: rgba(255, 255, 255, 0.2);
     padding: 10px 50px;border-radius: 3px;}

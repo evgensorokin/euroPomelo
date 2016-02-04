@@ -62,10 +62,10 @@ $currentTerm = get_queried_object();
 
         <h2 class="text-center">Our range of products</h2>
 
-        <div class="row">
+        <div class="row clearfix">
             <?php while(have_posts()) : the_post(); ?>
                 <?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()) ); ?>
-                <div class="col-md-3 col-sm-6 product">
+                <div class="col-md-3 col-sm-6 product post">
                     <div class="img" style="background: url('<?= $feat_image; ?>') center no-repeat;"></div>
                     <div class="color-box text-center" style="background-color: <?php the_field('background_color_item'); ?>;">
                         <div>
@@ -75,9 +75,9 @@ $currentTerm = get_queried_object();
                     </div>
                 </div>
             <?php endwhile; ?>
-
-            <?php echo do_shortcode('[ajax_load_more post_type="product" taxonomy="brand" taxonomy_terms="'.$currentTerm->slug.'" taxonomy_operator="IN" offset="4" posts_per_page="4" pause="true" max_pages="0" transition="fade" button_label="Load More" container_type="div"]'); ?>
         </div>
+
+        <div id="content" role="main"></div>
 
     </div>
 </section>

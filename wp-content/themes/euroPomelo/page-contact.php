@@ -13,50 +13,39 @@
 
 get_header('pomelo'); ?>
 
-<section>
-	<div class="container">
+<?php if (have_posts()) : ?>
+    <?php while (have_posts()) : the_post(); ?>
+        <section>
+            <div class="container">
 
-		<div class="contact_us">
-			<div class="row">
-				<div class="col-sm-10 col-sm-offset-2">
-					<h1>Contact Us</h1>
-				</div>
-			</div>
+                <div class="contact_us">
+                    <div class="row">
+                        <div class="col-sm-10 col-sm-offset-2">
+                            <h1><?php the_title(); ?></h1>
+                        </div>
+                    </div>
 
-			<div class="row">
-				<div class="col-sm-2 hidden-xs"><img src="img/img_contact_us.png" class="img-responsive" /></div>
-				<div class="col-sm-6 col-xs-12">
-					<form>
-						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Your Name">
-						</div>
-						<div class="form-group">
-							<input type="email" class="form-control" placeholder="Email">
-						</div>
-						<div class="form-group">
-							<textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
-						</div>
-						<button type="submit" class="btn btn-default">Send Message</button>
-					</form>
-				</div>
-				<div class="col-sm-4 col-xs-12">
-					<div class="address">
-						<p><b>Address:</b> Some Address 44, Italy</p>
-						<p><b>Phone:</b> +388919101010</p>
-						<p><b>Email:</b> info@europmalle.com</p>
-					</div>
+                    <div class="row">
+                        <div class="col-sm-2 hidden-xs"><img src="<?php echo get_template_directory_uri(); ?>/img/img_contact_us.png" class="img-responsive" /></div>
+                        <div class="col-sm-6 col-xs-12">
+                            <?php echo do_shortcode('[contact-form-7 id="7" title="Contact Us"]'); ?>
+                        </div>
+                        <div class="col-sm-4 col-xs-12">
+                            <div class="address"><?php the_content(); ?></div>
 
-					<p><b>Follow Us:</b></p>
-					<div class="social">
-						<a href="#"><img src="img/facebook.svg" width="18" /></a>
-						<a href="#"><img src="img/twitter.svg" width="18" /></a>
-						<a href="#"><img src="img/googleplus.svg" width="18" /></a>
-					</div>
-				</div>
-			</div>
-		</div>
+                            <p><b>Follow Us:</b></p>
+                            <div class="social">
+                                <a href="<?php the_field('url_facebook', 'option'); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/facebook.svg" width="18" /></a>
+                                <a href="<?php the_field('url_twitter', 'option'); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/twitter.svg" width="18" /></a>
+                                <a href="<?php the_field('url_google_plus', 'option'); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/googleplus.svg" width="18" /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-	</div>
-</section>
+            </div>
+        </section>
+    <?php endwhile; ?>
+<?php endif; ?>
 
 <?php get_footer('pomelo'); ?>
