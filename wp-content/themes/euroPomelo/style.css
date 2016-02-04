@@ -107,9 +107,11 @@ hr{border-top: 1px solid #D7D7D7;margin: 10px;}
     padding: 10px 25px;display: inline-block;border-radius: 3px;margin: 10px 0;}
 .btn-default:hover{color: #fff;background-color: #178cca;border-color: #fff;text-decoration: none;}
 
-.btn-load{font-size: 21px;color: #383636;border: 1px solid #DADADA;border-radius: 5px;margin: 50px 0;
-    padding: 10px 50px;display: inline-block;text-decoration: none;}
-.btn-load:hover{text-decoration: none;background-color: #383636;color: #DADADA;}
+.ajax-load-more-wrap .alm-btn-wrap .btn-load{font-size: 21px !important;color: #383636 !important;border: 1px solid #DADADA !important;
+    border-radius: 5px !important;margin: 50px 0 !important;padding: 10px 50px !important;display: inline-block !important;
+    text-decoration: none !important;background-color: #fff !important;height: auto !important;line-height: normal !important;
+    cursor: pointer;}
+.ajax-load-more-wrap .alm-btn-wrap .btn-load:hover{text-decoration: none;background-color: #383636;color: #DADADA;}
 
 .padd-b-none{padding-bottom: 0 !important;}
 .padd-t-none{padding-top: 0 !important;}
@@ -137,8 +139,8 @@ header ul li a:hover{color: #fff;text-decoration: underline;}
 /* brands */
 .brands{padding: 50px 0 20px;}
 .brands .title{font-size: 14px;color: #000;display: block;padding: 0 10% 10px;}
-.brands .brands-img{padding: 30px 10px 50px;text-align: justify;-moz-text-align-last: justify;-webkit-text-align-last: justify;text-align-last: justify;}
-.brands .brands-img img{vertical-align: middle;}
+.brands .brands-img{padding: 20px 10px 40px;}
+.brands .brands-img img{vertical-align: middle;margin: 10px 25px;}
 
 /* color-res */
 .color-res{position: relative;margin-top: 50px;}
@@ -173,9 +175,9 @@ textarea.form-control{height: 230px;resize: vertical;}
 .presentation .btn:hover{text-decoration: none;background-color: rgba(23, 140, 202, 0.2);}
 
 /* tab brands */
-.tab-brands{background-color: #DBEEF8;}
+.tab-brands{background-color: #DBEEF8;height: 140px;}
 .tab-brands .active-tab{background-color: #fff;}
-.tab-brands .tab{padding: 30px 20px;}
+.tab-brands .tab{padding: 30px 20px;height: 140px;}
 .tab-brands .tab a{color: #178cca;font-size: 48px;vertical-align: middle;margin: 0 50px;font-family: 'OpenSans';}
 .tab-brands .tab a:hover{text-decoration: none;}
 .tab-brands .tab img{vertical-align: middle;}
@@ -323,7 +325,7 @@ footer{background-color: #178CCA;padding: 50px 0;font-size: 14px;color: #fff;}
     p{font-size: 16px;line-height: 24px;padding: 5px 0;}
     .btn-blue{padding: 10px 25px;font-size: 21px;}
 
-    header .button-menu{display: block;position: absolute;top: 30px;right: 20px;cursor: pointer;width: 32px;height: 32px;}
+    header .button-menu{display: block;position: absolute;top: 10px;right: 20px;cursor: pointer;width: 32px;height: 32px;}
     header ul{clear: both;margin: 0;float: none;width: 100%;display: none;}
     header ul.open-menu{display: block;}
     header .open-menu li{display: block;float: none;text-align: center;padding: 5px 0;}

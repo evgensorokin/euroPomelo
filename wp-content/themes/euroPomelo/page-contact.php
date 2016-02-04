@@ -13,28 +13,50 @@
 
 get_header('pomelo'); ?>
 
-<div id="primary" class="content-area">
-	<main id="main" class="site-main" role="main">
-		<?php
-		// Start the loop.
-		while ( have_posts() ) : the_post();
+<section>
+	<div class="container">
 
-			// Include the page content template.
-			get_template_part( 'template-parts/content', 'page' );
+		<div class="contact_us">
+			<div class="row">
+				<div class="col-sm-10 col-sm-offset-2">
+					<h1>Contact Us</h1>
+				</div>
+			</div>
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) {
-				comments_template();
-			}
+			<div class="row">
+				<div class="col-sm-2 hidden-xs"><img src="img/img_contact_us.png" class="img-responsive" /></div>
+				<div class="col-sm-6 col-xs-12">
+					<form>
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Your Name">
+						</div>
+						<div class="form-group">
+							<input type="email" class="form-control" placeholder="Email">
+						</div>
+						<div class="form-group">
+							<textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
+						</div>
+						<button type="submit" class="btn btn-default">Send Message</button>
+					</form>
+				</div>
+				<div class="col-sm-4 col-xs-12">
+					<div class="address">
+						<p><b>Address:</b> Some Address 44, Italy</p>
+						<p><b>Phone:</b> +388919101010</p>
+						<p><b>Email:</b> info@europmalle.com</p>
+					</div>
 
-			// End of the loop.
-		endwhile;
-		?>
+					<p><b>Follow Us:</b></p>
+					<div class="social">
+						<a href="#"><img src="img/facebook.svg" width="18" /></a>
+						<a href="#"><img src="img/twitter.svg" width="18" /></a>
+						<a href="#"><img src="img/googleplus.svg" width="18" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
 
-	</main><!-- .site-main -->
-
-	<?php get_sidebar( 'content-bottom' ); ?>
-
-</div><!-- .content-area -->
+	</div>
+</section>
 
 <?php get_footer('pomelo'); ?>

@@ -248,7 +248,6 @@ function create_post_type_products() {
 
     $args = array(
         'labels' => $labels,
-
         'public' => true,
         'publicly_queryable' => true,
         'show_ui' => true,
@@ -257,24 +256,24 @@ function create_post_type_products() {
         'capability_type' => 'post',
         'hierarchical' => false,
         'menu_position' => 5,
-        'supports' => array('title','thumbnail','editor','comments', 'excerpt'),
+        'supports' => array('title','thumbnail','editor','comments','excerpt'),
         'taxonomies' => array('post_tag')
     );
 
-    register_post_type( 'euro_pomelo_product', $args);
+    register_post_type( 'product', $args);
 }
 
-add_action( 'init', 'create_post_type_receiptes' );
-function create_post_type_receiptes() {
+add_action( 'init', 'create_post_type_recipes' );
+function create_post_type_recipes() {
     $labels = array(
-        'name' => _x('Receiptes', 'post type general name'),
-        'singular_name' => _x('Receipte', 'post type singular name'),
+        'name' => _x('Recipes', 'post type general name'),
+        'singular_name' => _x('Recipe', 'post type singular name'),
         'add_new' => _x('Add New', 'post'),
-        'add_new_item' => __('Add New Receipte'),
-        'edit_item' => __('Edit Receipte'),
-        'new_item' => __('New Receipte'),
-        'view_item' => __('View Receipte'),
-        'search_items' => __('Search Receipte'),
+        'add_new_item' => __('Add New Recipe'),
+        'edit_item' => __('Edit Recipe'),
+        'new_item' => __('New Recipe'),
+        'view_item' => __('View Recipe'),
+        'search_items' => __('Search Recipe'),
         'not_found' =>  __('Nothing found'),
         'not_found_in_trash' => __('Nothing found in Trash'),
         'parent_item_colon' => ''
@@ -290,11 +289,11 @@ function create_post_type_receiptes() {
         'capability_type' => 'post',
         'hierarchical' => false,
         'menu_position' => 5,
-        'supports' => array('title','thumbnail','editor','comments', 'excerpt'),
+        'supports' => array('title','thumbnail','editor','comments','excerpt'),
         'taxonomies' => array('post_tag')
     );
 
-    register_post_type( 'euro_pomelo_receipte', $args);
+    register_post_type( 'recipe', $args);
 }
 
 add_action('init', 'create_brand');
@@ -321,14 +320,14 @@ function create_brand(){
         'show_tagcloud'         => true,
         'hierarchical'          => true,
         'update_count_callback' => '',
-        'rewrite'               => true,
+        'query_var'             => true,
         'capabilities'          => array(),
         'meta_box_cb'           => null,
         'show_admin_column'     => false,
         '_builtin'              => false,
         'show_in_quick_edit'    => null,
     );
-    register_taxonomy('taxonomy', 'euro_pomelo_product', $args );
+    register_taxonomy('brand', 'product', $args );
 }
 
 if( function_exists('acf_add_options_page') ) {
