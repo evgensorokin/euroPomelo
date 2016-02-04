@@ -50,13 +50,13 @@ get_header('pomelo'); ?>
                                     <hr/>
                                     <ul>
                                         <?php $posts = get_field('select_products'); if( $posts ) : ?>
-                                            <?php foreach( $posts as $p) : ?>
-                                            <li><span>1.</span> <?php echo get_the_title($p->ID); ?></li>
+                                            <?php $j = 0; foreach( $posts as $p) : $j++; ?>
+                                            <li><span><?= $j; ?>.</span> <?php echo get_the_title($p->ID); ?></li>
                                             <?php endforeach; ?>
                                         <?php endif; ?>
 
                                         <?php $ing = get_field('ingredients'); if( $ing ) : ?>
-                                            <?php $i = 1; while (has_sub_field('ingredients')) : $i++; ?>
+                                            <?php $i = $j; while (has_sub_field('ingredients')) : $i++; ?>
                                             <li><span><?= $i; ?>.</span> <?php the_sub_field('ingredient'); ?></li>
                                             <?php if($i == 3) { break; } endwhile; ?>
                                         <?php endif; ?>
