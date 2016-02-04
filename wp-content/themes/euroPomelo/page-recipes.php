@@ -50,13 +50,16 @@ get_header('pomelo'); ?>
                                     <hr/>
                                     <ul>
                                         <?php $posts = get_field('select_products'); if( $posts ) : ?>
-                                            <?php foreach( $posts as $post) : setup_postdata($post); ?>
-                                            <li><span>1.</span> <?php the_title(); ?></li>
+                                            <?php foreach( $posts as $p) : ?>
+                                            <li><span>1.</span> <?php echo get_the_title($p->ID); ?></li>
                                             <?php endforeach; ?>
-                                            <?php wp_reset_postdata(); ?>
                                         <?php endif; ?>
-                                        <li><span>2.</span> Tomato 200g</li>
-                                        <li><span>3.</span> Mozzarella di Bufala 100g</li>
+
+                                        <?php $ing = get_field('ingredients'); if( $ing ) : ?>
+                                            <?php $i = 1; while (has_sub_field('ingredients')) : $i++; ?>
+                                            <li><span><?= $i; ?>.</span> <?php the_sub_field('ingredient'); ?></li>
+                                            <?php if($i == 3) { break; } endwhile; ?>
+                                        <?php endif; ?>
                                     </ul>
                                     <div class="text-center"><a href="<?php the_permalink(); ?>">View Recipe</a></div>
                                 </div>
