@@ -25,7 +25,6 @@ get_header('pomelo'); ?>
 
             $max = $loop->max_num_pages;
 
-            // Add some parameters for the JS.
             wp_localize_script(
                 'pbd-alp-load-posts',
                 'pbd_alp',

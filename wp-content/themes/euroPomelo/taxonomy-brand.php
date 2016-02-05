@@ -66,7 +66,7 @@ $currentTerm = get_queried_object();
             <?php while(have_posts()) : the_post(); ?>
                 <?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()) ); ?>
                 <div class="col-md-3 col-sm-6 product post">
-                    <div class="img" style="background: url('<?= $feat_image; ?>') center no-repeat;"></div>
+                    <a href="<?php the_permalink(); ?>" class="img" style="background: url('<?= $feat_image; ?>') center no-repeat;"></a>
                     <div class="color-box text-center" style="background-color: <?php the_field('background_color_item'); ?>;">
                         <div>
                             <b><?php the_title(); ?></b>
