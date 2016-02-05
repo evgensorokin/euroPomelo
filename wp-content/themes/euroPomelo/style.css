@@ -199,24 +199,24 @@ textarea.form-control{height: 230px;resize: vertical;}
     border: 1px solid #383636;border-radius: 3px;}
 .list-products .color-box a:hover{text-decoration: none;background-color: #383636;color: #DADADA;}
 
-/* list recepies */
+/* list recipes */
 .list-recipes{overflow: hidden;}
 .list-recipes .row{margin: 0 -5px;}
 .list-recipes h2{padding-bottom: 75px;}
-.list-recipes .recepie{height: 600px;padding: 0 5px;margin: 5px 0;}
-.list-recipes .img{height: 260px;background-size: cover !important;}
+.list-recipes .recipe{height: 600px;padding: 0 5px;margin: 5px 0;}
+.list-recipes .img{height: 260px;background-size: cover !important;display: block;}
 .list-recipes .color-box{height: 340px;padding: 20px 5%;}
-.list-recipes .color-box>div{position: relative;top: 50%;transform: translateY(-50%);}
+.list-recipes .color-box>div{}
 .list-recipes .color-box .title{color: #000;font-size: 34px;padding-bottom: 0;font-family: 'Amatic';display: block;}
 .list-recipes .color-box ul{margin-left: 15px;}
 .list-recipes .color-box ul li{font-family: 'OpenSansLigth';font-size: 18px;padding: 0;}
 .list-recipes .color-box hr{margin: 5px 0 25px;border-color: #797977;}
 .list-recipes .color-box ul li span{font-family: 'Amatic';font-size: 34px;vertical-align: middle;margin-right: 10px;}
 .list-recipes .color-box a{color: #818A8C;font-size: 18px;display: inline-block;padding: 5px 25px;text-align: center;
-    border: 1px solid #797979;border-radius: 3px;margin-top: 10px;}
+    border: 1px solid #797979;border-radius: 3px;position: absolute;bottom: 25px;left: 50%;transform: translateX(-50%);}
 .list-recipes .color-box a:hover{text-decoration: none;background-color: #383636;color: #DADADA;}
 
-/* recepie single */
+/* recipe single */
 .recipe-single{width: 100%;position: relative;margin: 50px 0;padding: 75px 0 50px;}
 .recipe-single-middle{width: calc(100% - 10px);margin: 50px 5px;float: left;}
 .recipe-single-middle:before{position: absolute;height: 100%;width: 100%;left: -100%;content: "";top: 0;}
@@ -249,13 +249,13 @@ textarea.form-control{height: 230px;resize: vertical;}
 .product-article .small-info{border: 1px solid #D8D7D7;border-top: none;padding: 40px 50px;}
 .product-article .small-info p{font-size: 24px;padding: 5px 0;}
 
-/* recepies with */
-.recepies-with{padding: 0 0 75px;}
-.recepies-with .title{font-size: 30px;color: #000;}
-.recepies-with hr{margin: 15px 0;}
-.recepies-with .list-with{padding-top: 30px;}
-.recepies-with .list-with .img{height: 175px;background-size: cover !important;}
-.recepies-with .list-with span{font-size: 16px;display: block;padding-top: 10px;color: #000;}
+/* recipes with */
+.recipes-with{padding: 0 0 75px;}
+.recipes-with .title{font-size: 30px;color: #000;}
+.recipes-with hr{margin: 15px 0;}
+.recipes-with .list-with{padding-top: 30px;}
+.recipes-with .list-with .img{height: 175px;background-size: cover !important;}
+.recipes-with .list-with span{font-size: 16px;display: block;padding-top: 10px;color: #000;}
 
 /* footer */
 footer{background-color: #178CCA;padding: 50px 0;font-size: 14px;color: #fff;}
@@ -265,7 +265,7 @@ footer{background-color: #178CCA;padding: 50px 0;font-size: 14px;color: #fff;}
 
     .presentation{padding: 150px 0;}
 
-    .recepies-with .list-with .prod-w{margin-bottom: 10px;}
+    .recipes-with .list-with .prod-w{margin-bottom: 10px;}
 }
 
 @media (max-width: 991px) {
@@ -310,8 +310,8 @@ footer{background-color: #178CCA;padding: 50px 0;font-size: 14px;color: #fff;}
     .product-article .side-info{padding: 0 15px;}
     .product-article .side-info p{padding: 5px 0;}
 
-    .recepies-with{padding-bottom: 25px;}
-    .recepies-with .list-with{padding: 15px 0;}
+    .recipes-with{padding-bottom: 25px;}
+    .recipes-with .list-with{padding: 15px 0;}
 
     .list-products.also-products{padding: 25px 0;}
     .list-products.also-products h2{padding-bottom: 25px;}
@@ -373,7 +373,7 @@ footer{background-color: #178CCA;padding: 50px 0;font-size: 14px;color: #fff;}
     .list-products h2{padding-bottom: 45px;}
 
     .list-recipes h2{padding-bottom: 25px;}
-    .list-recipes .recepie{padding: 0 15px;height: auto;}
+    .list-recipes .recipe{padding: 0 15px;height: auto;}
     .list-recipes .color-box{height: auto;}
     .list-recipes .color-box>div{top: 0;transform: translateY(0);}
     .list-recipes .color-box hr{margin: 5px 0 15px;}
@@ -384,7 +384,7 @@ footer{background-color: #178CCA;padding: 50px 0;font-size: 14px;color: #fff;}
     .product-article .category img{height: 30px;}
 
     .product-article .side-left{padding: 0 15px 15px;}
-    .recepies-with .title{font-size: 20px;text-align: center;}
+    .recipes-with .title{font-size: 20px;text-align: center;}
 
     .recipe-single{padding: 15px 0;}
     .recipe-single .side-left{padding: 0 15px 15px;}

@@ -57,11 +57,11 @@ if( $loop->have_posts() ) {
 
 if( $relationRecipes ) :
 ?>
-<section class="recepies-with">
+<section class="recipes-with">
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <div class="title">Recepies With Mozzarela Sticks</div>
+                <div class="title">Recipes With Mozzarela Sticks</div>
                 <hr/>
             </div>
         </div>
