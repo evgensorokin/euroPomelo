@@ -13,7 +13,7 @@
 
 get_header('pomelo'); ?>
 
-<section class="white-box-content list-recepies">
+<section class="white-box-content list-recipes">
     <div class="container">
 
         <h2 class="text-center">Recepies We Recommand</h2>
