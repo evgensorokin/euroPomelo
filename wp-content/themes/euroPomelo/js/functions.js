@@ -9,5 +9,9 @@
 
 	$( document ).ready( function() {
 
+		$('header .button-menu').on('click', function(){
+            $('header ul').slideToggle();
+		});
+
 	} );
 } )( jQuery );

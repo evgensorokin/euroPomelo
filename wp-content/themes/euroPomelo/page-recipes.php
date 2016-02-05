@@ -59,7 +59,7 @@ get_header('pomelo'); ?>
                                             <?php if($i == 3) { break; } endwhile; ?>
                                     <?php endif; ?>
                                 </ul>
-                                <div class="text-center"><a href="<?php the_permalink(); ?>">View Recipe</a></div>
+                                <a href="<?php the_permalink(); ?>">View Recipe</a>
                             </div>
                         </div>
                 <?php endwhile; ?>

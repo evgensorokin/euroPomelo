@@ -78,7 +78,7 @@ get_header('pomelo'); ?>
                                             <?php if($i == 3) { break; } endwhile; ?>
                                     <?php endif; ?>
                                 </ul>
-                                <div class="text-center"><a href="<?php the_permalink(); ?>">View Product</a></div>
+                                <a href="<?php the_permalink(); ?>">View Product</a>
                             </div>
                         </div>
                     <?php endwhile; ?>
@@ -106,7 +106,7 @@ get_header('pomelo'); ?>
                                             <?php if($i == 3) { break; } endwhile; ?>
                                     <?php endif; ?>
                                 </ul>
-                                <div class="text-center"><a href="<?php the_permalink(); ?>">View Product</a></div>
+                                <a href="<?php the_permalink(); ?>">View Product</a>
                             </div>
                         </div>
                     <?php endwhile; ?>
@@ -119,6 +119,7 @@ get_header('pomelo'); ?>
                         .recipe-single-middle:after{background-color: <?php the_field('background_color_item'); ?>;}
                     </style>
                     <section class="recipe-single recipe-single-middle hidden-sm hidden-xs" style="background-color: <?php the_field('background_color_item'); ?>;">
+                        <span class="arrow-cur"></span>
                         <div class="clearfix">
                             <a href="#" class="arrow arrow-left"><img src="<?php echo get_template_directory_uri(); ?>/img/arrow-left.png" /></a>
                             <div class="row">
@@ -179,7 +180,7 @@ get_header('pomelo'); ?>
                                             <?php if($i == 3) { break; } endwhile; ?>
                                     <?php endif; ?>
                                 </ul>
-                                <div class="text-center"><a href="<?php the_permalink(); ?>">View Product</a></div>
+                                <a href="<?php the_permalink(); ?>">View Product</a>
                             </div>
                         </div>
                     <?php endwhile; ?>

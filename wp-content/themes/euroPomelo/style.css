@@ -205,7 +205,7 @@ textarea.form-control{height: 230px;resize: vertical;}
 .list-recipes h2{padding-bottom: 75px;}
 .list-recipes .recipe{height: 600px;padding: 0 5px;margin: 5px 0;}
 .list-recipes .img{height: 260px;background-size: cover !important;display: block;}
-.list-recipes .color-box{height: 340px;padding: 20px 5%;}
+.list-recipes .color-box{height: 340px;padding: 20px 5% 75px;}
 .list-recipes .color-box>div{}
 .list-recipes .color-box .title{color: #000;font-size: 34px;padding-bottom: 0;font-family: 'Amatic';display: block;}
 .list-recipes .color-box ul{margin-left: 15px;}
@@ -213,7 +213,7 @@ textarea.form-control{height: 230px;resize: vertical;}
 .list-recipes .color-box hr{margin: 5px 0 25px;border-color: #797977;}
 .list-recipes .color-box ul li span{font-family: 'Amatic';font-size: 34px;vertical-align: middle;margin-right: 10px;}
 .list-recipes .color-box a{color: #818A8C;font-size: 18px;display: inline-block;padding: 5px 25px;text-align: center;
-    border: 1px solid #797979;border-radius: 3px;position: absolute;bottom: 25px;left: 50%;transform: translateX(-50%);}
+    border: 1px solid #797979;border-radius: 3px;position: absolute;bottom: 20px;left: 50%;transform: translateX(-50%);}
 .list-recipes .color-box a:hover{text-decoration: none;background-color: #383636;color: #DADADA;}
 
 /* recipe single */
@@ -221,6 +221,19 @@ textarea.form-control{height: 230px;resize: vertical;}
 .recipe-single-middle{width: calc(100% - 10px);margin: 50px 5px;float: left;}
 .recipe-single-middle:before{position: absolute;height: 100%;width: 100%;left: -100%;content: "";top: 0;}
 .recipe-single-middle:after{position: absolute;height: 100%;width: 100%;right: -100%;content: "";top: 0;}
+.recipe-single-middle .arrow-cur{
+    top: 0;
+    left: 120px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(251, 251, 251, 0);
+    border-top-color: #fff;
+    border-width: 30px;
+}
 .recipe-single .img{border: 10px solid #fff;background-size: cover !important;height: 290px;}
 .recipe-single .side-left{padding: 0 30px 0 75px;}
 .recipe-single .ingredients{margin-top: 15px;background-color: #DCE3C8;padding: 20px 50px 20px 120px;position: relative;}
@@ -334,8 +347,7 @@ footer{background-color: #178CCA;padding: 50px 0;font-size: 14px;color: #fff;}
 
     header .button-menu{display: block;position: absolute;top: 10px;right: 20px;cursor: pointer;width: 32px;height: 32px;}
     header ul{clear: both;margin: 0;float: none;width: 100%;display: none;}
-    header ul.open-menu{display: block;}
-    header .open-menu li{display: block;float: none;text-align: center;padding: 5px 0;}
+    header ul li{display: block;float: none;text-align: center;padding: 5px 0;}
 
     .main-page-sl .h1{font-size: 48px;}
     .main-page-sl .h2{font-size: 22px;}
