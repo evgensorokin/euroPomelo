@@ -234,7 +234,7 @@ textarea.form-control{height: 230px;resize: vertical;}
 .recipe-single .side-info .title{font-size: 34px;color: #000;font-family: 'Amatic';}
 .recipe-single .side-info hr{margin: 10px 0;width: 50%;}
 .recipe-single .side-info p{padding: 5px 0;}
-.recipe-single .arrow{position: absolute;top: 50%;margin-top: -33px;}
+.recipe-single .arrow{position: absolute;top: 50%;margin-top: -33px;z-index: 1000;}
 .recipe-single .arrow-left{left: 15px;}
 .recipe-single .arrow-right{right: 15px;}
 

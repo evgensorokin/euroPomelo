@@ -73,9 +73,9 @@ get_header('pomelo'); ?>
                                     <?php endif; ?>
 
                                     <?php $ing = get_field('ingredients'); if( $ing ) : ?>
-                                        <?php $i = $j; while (has_sub_field('ingredients')) : $i++; ?>
+                                        <?php $i = $j; while (has_sub_field('ingredients')) : $i++; if($i > 3) { break; } ?>
                                             <li><span><?= $i; ?>.</span> <?php the_sub_field('ingredient'); ?></li>
-                                            <?php if($i == 3) { break; } endwhile; ?>
+                                            <?php if($i >= 3) { break; } endwhile; ?>
                                     <?php endif; ?>
                                 </ul>
                                 <a href="<?php the_permalink(); ?>">View Product</a>
@@ -101,9 +101,9 @@ get_header('pomelo'); ?>
                                     <?php endif; ?>
 
                                     <?php $ing = get_field('ingredients'); if( $ing ) : ?>
-                                        <?php $i = $j; while (has_sub_field('ingredients')) : $i++; ?>
+                                        <?php $i = $j; while (has_sub_field('ingredients')) : $i++; if($i > 3) { break; } ?>
                                             <li><span><?= $i; ?>.</span> <?php the_sub_field('ingredient'); ?></li>
-                                            <?php if($i == 3) { break; } endwhile; ?>
+                                            <?php if($i >= 3) { break; } endwhile; ?>
                                     <?php endif; ?>
                                 </ul>
                                 <a href="<?php the_permalink(); ?>">View Product</a>
@@ -111,6 +111,11 @@ get_header('pomelo'); ?>
                         </div>
                     <?php endwhile; ?>
                 <?php endif; ?>
+
+                <?php
+                $next_post = get_next_post();
+                $prev_post = get_previous_post();
+                ?>
 
                 <?php while ( have_posts() ) : the_post(); ?>
                 <?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()) ); ?>
@@ -121,7 +126,7 @@ get_header('pomelo'); ?>
                     <section class="recipe-single recipe-single-middle hidden-sm hidden-xs" style="background-color: <?php the_field('background_color_item'); ?>;">
                         <span class="arrow-cur"></span>
                         <div class="clearfix">
-                            <a href="#" class="arrow arrow-left"><img src="<?php echo get_template_directory_uri(); ?>/img/arrow-left.png" /></a>
+                            <a href="<?= get_permalink($next_post->ID); ?>" class="arrow arrow-left"><img src="<?php echo get_template_directory_uri(); ?>/img/arrow-left.png" /></a>
                             <div class="row">
                                 <div class="col-sm-6 side-left">
                                     <div class="img" style="background: url('<?= $feat_image; ?>') center no-repeat;"></div>
@@ -149,7 +154,7 @@ get_header('pomelo'); ?>
                                     <?php the_content(); ?>
                                 </div>
                             </div>
-                            <a href="#" class="arrow arrow-right"><img src="<?php echo get_template_directory_uri(); ?>/img/arrow-right.png" /></a>
+                            <a href="<?= get_permalink($prev_post->ID); ?>" class="arrow arrow-right"><img src="<?php echo get_template_directory_uri(); ?>/img/arrow-right.png" /></a>
                         </div>
                     </section>
                 <?php endwhile; ?>
@@ -175,9 +180,9 @@ get_header('pomelo'); ?>
                                     <?php endif; ?>
 
                                     <?php $ing = get_field('ingredients'); if( $ing ) : ?>
-                                        <?php $i = $j; while (has_sub_field('ingredients')) : $i++; ?>
+                                        <?php $i = $j; while (has_sub_field('ingredients')) : $i++; if($i > 3) { break; } ?>
                                             <li><span><?= $i; ?>.</span> <?php the_sub_field('ingredient'); ?></li>
-                                            <?php if($i == 3) { break; } endwhile; ?>
+                                            <?php if($i >= 3) { break; } endwhile; ?>
                                     <?php endif; ?>
                                 </ul>
                                 <a href="<?php the_permalink(); ?>">View Product</a>

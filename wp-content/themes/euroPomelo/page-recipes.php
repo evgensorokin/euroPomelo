@@ -54,9 +54,9 @@ get_header('pomelo'); ?>
                                     <?php endif; ?>
 
                                     <?php $ing = get_field('ingredients'); if( $ing ) : ?>
-                                        <?php $i = $j; while (has_sub_field('ingredients')) : $i++; ?>
+                                        <?php $i = $j; while (has_sub_field('ingredients')) : $i++; if($i > 3) { break; } ?>
                                             <li><span><?= $i; ?>.</span> <?php the_sub_field('ingredient'); ?></li>
-                                            <?php if($i == 3) { break; } endwhile; ?>
+                                            <?php if($i >= 3) { break; } endwhile; ?>
                                     <?php endif; ?>
                                 </ul>
                                 <a href="<?php the_permalink(); ?>">View Recipe</a>
