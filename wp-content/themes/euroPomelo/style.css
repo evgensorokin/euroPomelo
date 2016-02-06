@@ -225,7 +225,7 @@ textarea.form-control{height: 230px;resize: vertical;}
     position: absolute;pointer-events: none;border-color: rgba(251, 251, 251, 0);border-top-color: #fff;border-width: 30px;}
 .recipe-single .img{border: 10px solid #fff;background-size: cover !important;height: 290px;}
 .recipe-single .side-left{padding: 0 30px 0 75px;}
-.recipe-single .ingredients{margin-top: 15px;background-color: #DCE3C8;padding: 20px 50px 20px 120px;position: relative;}
+.recipe-single .ingredients{margin-top: 15px;background-color: rgba(0, 0, 0, 0.2);padding: 20px 50px 20px 120px;position: relative;}
 .recipe-single .ingredients img{position: absolute;top: 20px;left: 45px;}
 .recipe-single .ingredients .title{display: block;font-size: 30px;color: #000;font-family: 'Amatic';padding-bottom: 15px;}
 .recipe-single .ingredients ol{list-style-type: decimal;margin-left: 15px;}
